@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import fetchArtworks from '../redux/actions/artworks';
-import '../styles/App.css';
+import Artwork from '../components/Artwork';
 
 const ArtworksContainer = ({ fetchArtworks, artworks }) => {
   useEffect(() => {
@@ -10,25 +10,24 @@ const ArtworksContainer = ({ fetchArtworks, artworks }) => {
   }, []);
 
   return artworks.length ? (
-    <div className="row">
-      <div className="col-xl-4 col-md-6 col-12">
-        <img src={artworks[0].images.web.url} alt="jaja" />
-        <img src={artworks[1].images.web.url} alt="jaja" />
-        <img src={artworks[2].images.web.url} alt="jaja" />
-        <img src={artworks[3].images.web.url} alt="jaja" />
-        <img src={artworks[4].images.web.url} alt="jaja" />
+    <div className="row artworks-col-cont">
+      <div className="col-md-4 col-12">
+        <Artwork artwork={artworks[0]} />
+        <Artwork artwork={artworks[1]} />
+        <Artwork artwork={artworks[2]} />
+        <Artwork artwork={artworks[3]} />
       </div>
-      <div className="col-xl-4 col-md-6 col-12">
-        <img src={artworks[5].images.web.url} alt="jaja" />
-        <img src={artworks[6].images.web.url} alt="jaja" />
-        <img src={artworks[7].images.web.url} alt="jaja" />
-        <img src={artworks[8].images.web.url} alt="jaja" />
+      <div className="col-md-4 col-12">
+        <Artwork artwork={artworks[4]} />
+        <Artwork artwork={artworks[5]} />
+        <Artwork artwork={artworks[6]} />
+        <Artwork artwork={artworks[7]} />
       </div>
-      <div className="col-xl-4 col-md-6 col-12">
-        <img src={artworks[9].images.web.url} alt="jaja" />
-        <img src={artworks[10].images.web.url} alt="jaja" />
-        <img src={artworks[11].images.web.url} alt="jaja" />
-        <img src={artworks[12].images.web.url} alt="jaja" />
+      <div className="col-md-4 col-12">
+        <Artwork artwork={artworks[8]} />
+        <Artwork artwork={artworks[9]} />
+        <Artwork artwork={artworks[10]} />
+        <Artwork artwork={artworks[11]} />
       </div>
     </div>
   ) : (

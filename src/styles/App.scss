@@ -1,0 +1,60 @@
+@import 'https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap';
+
+$domine-font: 'Domine', serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#root {
+  margin: auto;
+  background-color: black;
+  padding: 0 2rem;
+}
+
+.img-banner-cont {
+  margin-bottom: 1.5rem;
+}
+
+.img-banner {
+  width: 83%;
+  padding: 0.7rem 0.4rem;
+  margin: auto;
+  margin-top: -2rem;
+  background-color: white;
+  opacity: 0.85;
+  text-align: center;
+  font-family: $domine-font;
+
+  p {
+    line-height: 1.2rem;
+  }
+
+  p:first-child {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  p:nth-child(2) {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  #root {
+    width: 75%;
+  }
+}
