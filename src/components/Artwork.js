@@ -1,9 +1,7 @@
-const Artwork = () => {
-    return ( 
-        <div>
-            Artwork
-        </div>
-     );
-}
- 
+const Artwork = () => (
+  <div>
+    Artwork
+  </div>
+);
+
 export default Artwork;

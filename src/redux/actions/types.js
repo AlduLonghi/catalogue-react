@@ -1,1 +1,3 @@
-export const FETCH_ARTWORKS = 'FETCH_ARTWROKS';
+const FETCH_ARTWORKS = 'FETCH_ARTWORKS';
+
+export default FETCH_ARTWORKS;
