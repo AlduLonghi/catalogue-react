@@ -8,6 +8,10 @@ $domine-font: 'Domine', serif;
   box-sizing: border-box;
 }
 
+a {
+  color: black;
+}
+
 body {
   background-color: #81592b;
 }
@@ -55,6 +59,11 @@ img {
     font-size: 0.9rem;
     margin-bottom: 0;
   }
+}
+
+.artwork-details {
+  height: 100vh;
+  color: white;
 }
 
 @media screen and (min-width: 1240px) {
