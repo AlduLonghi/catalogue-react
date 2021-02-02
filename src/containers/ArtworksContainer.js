@@ -12,22 +12,13 @@ const ArtworksContainer = ({ fetchArtworks, artworks }) => {
   return artworks.length ? (
     <div className="row artworks-col-cont">
       <div className="col-md-4 col-12">
-        <Artwork artwork={artworks[0]} />
-        <Artwork artwork={artworks[1]} />
-        <Artwork artwork={artworks[2]} />
-        <Artwork artwork={artworks[3]} />
+        {[...artworks].splice(0, 4).map(artw => <Artwork key={artw.id} artwork={artw} />)}
       </div>
       <div className="col-md-4 col-12">
-        <Artwork artwork={artworks[4]} />
-        <Artwork artwork={artworks[5]} />
-        <Artwork artwork={artworks[6]} />
-        <Artwork artwork={artworks[7]} />
+        {[...artworks].splice(4, 4).map(artw => <Artwork key={artw.id} artwork={artw} />)}
       </div>
       <div className="col-md-4 col-12">
-        <Artwork artwork={artworks[8]} />
-        <Artwork artwork={artworks[9]} />
-        <Artwork artwork={artworks[10]} />
-        <Artwork artwork={artworks[11]} />
+        {[...artworks].splice(7, 4).map(artw => <Artwork key={artw.id} artwork={artw} />)}
       </div>
     </div>
   ) : (
