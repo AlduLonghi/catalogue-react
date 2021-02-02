@@ -3,6 +3,14 @@
 }
 
 img {
-  width: 15rem;
+  width: 100%;
   height: auto;
+  margin-bottom: 2rem;
+}
+
+#root {
+  width: 70%;
+  margin: auto;
+  background-color: black;
+  padding: 0 2rem;
 }
