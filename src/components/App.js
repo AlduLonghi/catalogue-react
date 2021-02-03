@@ -7,7 +7,7 @@ import fetchArtworks from '../redux/actions/artworks';
 
 function App({ fetchArtworks }) {
   useEffect(() => {
-    fetchArtworks();
+    fetchArtworks(0);
   }, []);
 
   return (
@@ -21,7 +21,7 @@ App.propTypes = {
   fetchArtworks: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = dispatch => ({
-  fetchArtworks: () => dispatch(fetchArtworks()),
-});
+const mapDispatchToProps = {
+  fetchArtworks,
+};
 export default connect(null, mapDispatchToProps)(App);

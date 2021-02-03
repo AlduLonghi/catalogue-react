@@ -1,9 +1,17 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 import fetchArtworks from '../redux/actions/artworks';
 import Artwork from '../components/Artwork';
+import LoadingWheel from '../components/LoadingWheel';
 
-const ArtworksContainer = ({ artworks, filter }) => {
+const ArtworksContainer = ({ artworks, filter, fetchArtworks }) => {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    fetchArtworks(offset);
+  }, [offset]);
+
   let toRenderComponent;
   if (artworks.length) {
     const displayedArtworks = filter === 'All'
@@ -23,10 +31,21 @@ const ArtworksContainer = ({ artworks, filter }) => {
         <div className="col-md-4 col-12">
           {displayedArtworks.map(artw => <Artwork key={artw.id} artwork={artw} />)}
         </div>
+        <button
+          type="button"
+          onClick={() => setOffset(prev => prev + 120)}
+          className="btn btn-warning btn-lg py-4 mx-auto"
+        >
+          Large button
+        </button>
       </div>
     );
   } else {
-    toRenderComponent = (<div>loading...</div>);
+    toRenderComponent = (
+      <div className="d-flex justify-content-center align-items-center load-wheel-cont">
+        <LoadingWheel />
+      </div>
+    );
   }
 
   return (
@@ -39,6 +58,7 @@ const ArtworksContainer = ({ artworks, filter }) => {
 ArtworksContainer.propTypes = {
   artworks: PropTypes.instanceOf(Array).isRequired,
   filter: PropTypes.string.isRequired,
+  fetchArtworks: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -46,8 +66,8 @@ const mapStateToProps = state => ({
   filter: state.filter,
 });
 
-const mapDispatchToProps = dispatch => ({
-  fetchArtworks: () => dispatch(fetchArtworks()),
-});
+const mapDispatchToProps = {
+  fetchArtworks,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ArtworksContainer);
