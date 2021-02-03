@@ -6,7 +6,7 @@ const Artwork = ({ artwork }) => {
   return (
     <Link to={`/details/${artwork.id}`}>
       <div className="img-banner-cont">
-        <img src={artwork.images.web.url} alt="jaja" />
+        <img src={artwork.images.web.url} alt="artwork" />
         <div className="img-banner">
           <p>{artwork.title}</p>
           <p>{description}</p>

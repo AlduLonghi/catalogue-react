@@ -13,16 +13,15 @@ const ArtworksContainer = ({ artworks, filter }) => {
     toRenderComponent = (
       <div className="row artworks-col-cont">
         <div className="col-md-4 col-12">
-          {[...displayedArtworks].splice(0, 100)
+          {displayedArtworks.splice(0, Math.ceil(displayedArtworks.length / 3))
             .map(artw => <Artwork key={artw.id} artwork={artw} />)}
         </div>
         <div className="col-md-4 col-12">
-          {[...displayedArtworks].splice(100, 100)
+          {displayedArtworks.splice(0, Math.ceil(displayedArtworks.length / 2))
             .map(artw => <Artwork key={artw.id} artwork={artw} />)}
         </div>
         <div className="col-md-4 col-12">
-          {[...displayedArtworks].splice(200, 99)
-            .map(artw => <Artwork key={artw.id} artwork={artw} />)}
+          {displayedArtworks.map(artw => <Artwork key={artw.id} artwork={artw} />)}
         </div>
       </div>
     );

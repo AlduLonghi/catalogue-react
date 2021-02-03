@@ -16,6 +16,11 @@ a {
   color: black;
 }
 
+a:hover {
+  color: black;
+  outline: none;
+}
+
 body {
   background-color: black;
 }
@@ -35,12 +40,24 @@ img {
   min-height: 100vh;
 }
 
-main {
+header {
+  height: 6rem;
+  background-color: #733f35;
+  width: 100%;
+  margin-bottom: 2rem;
   flex-direction: column;
+  align-items: center;
+
+  p {
+    font-size: 2.5rem;
+    font-family: $caveat-font;
+    font-weight: 700;
+    color: white;
+  }
 }
 
-.main-height {
-  height: 100vh;
+main {
+  flex-direction: column;
 }
 
 .img-banner-cont {
@@ -122,31 +139,9 @@ main {
   font-style: normal;
 }
 
-header {
-  height: 6rem;
-  background-color: #733F35;
-  width: 100%;
-  margin-bottom: 2rem;
-  flex-direction: column;
-  align-items: center;
-
-  p {
-    font-size: 2.5rem;
-    font-family: $caveat-font;
-    font-weight: 700;
-    color: white;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .artwork-details {
     width: 75%;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .artwork-details {
-    width: 70%;
   }
 }
 
@@ -158,5 +153,9 @@ header {
   .artwork-details {
     padding: 2rem;
     width: 100%;
+  }
+
+  .main-height {
+    height: 100vh;
   }
 }
