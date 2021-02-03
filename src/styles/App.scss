@@ -165,14 +165,13 @@ main {
   font-style: normal;
 }
 
-.back-to-link {
+.back-to-btn {
   text-decoration: underline;
   font-size: 1.05rem;
   text-align: center;
-
-  a {
-    color: #d37245;
-  }
+  border: none;
+  background-color: transparent;
+  color: #d37245;
 }
 
 @media screen and (min-width: 480px) {

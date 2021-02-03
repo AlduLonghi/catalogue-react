@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const ArtworkDetails = ({ artworks }) => {
+  const history = useHistory();
   const { id } = useParams();
   const artwork = artworks.filter(artw => artw.id === id * 1);
   const description = artwork[0].creators.length ? artwork[0].creators[0].description : 'Unknown';
@@ -31,7 +32,13 @@ const ArtworkDetails = ({ artworks }) => {
             {artwork[0].type}
           </p>
           <p>{artwork[0].wall_description}</p>
-          <p className="back-to-link pt-2"><Link to="/">Back to homepage</Link></p>
+          <button
+            type="button"
+            onClick={() => history.goBack()}
+            className="back-to-btn pt-2"
+          >
+            Back to homepage
+          </button>
         </div>
       </div>
     </main>
