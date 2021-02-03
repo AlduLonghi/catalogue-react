@@ -2,7 +2,7 @@ import { FETCH_ARTWORKS, IS_LOADING } from '../actions/types';
 
 const initialState = {
   artworks: [],
-  isLoading: '',
+  isLoading: false,
 };
 
 const artworksReducer = (state = initialState, action) => {
@@ -15,7 +15,7 @@ const artworksReducer = (state = initialState, action) => {
     case IS_LOADING:
       return {
         ...state,
-        isLoading: action.payload,
+        isLoading: !state.isLoading,
       };
     default:
       return state;
