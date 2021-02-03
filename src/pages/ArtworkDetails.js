@@ -5,33 +5,33 @@ import PropTypes from 'prop-types';
 const ArtworkDetails = ({ artworks }) => {
   const history = useHistory();
   const { id } = useParams();
-  const artwork = artworks.filter(artw => artw.id === id * 1);
-  const description = artwork[0].creators.length ? artwork[0].creators[0].description : 'Unknown';
+  const artwork = artworks.filter(artw => artw.id === id * 1)[0];
+  const description = artwork.creators.length ? artwork.creators[0].description : 'Unknown';
 
   return (
     <main className="d-flex justify-content-center main-height">
       <div className="artwork-details row mx-auto">
         <div className="artwork-det-img d-flex justify-content-center col-xl-5 col-12 px-0">
-          <img className="artwork-img" src={artwork[0].images.web.url} alt="artwork" />
+          <img className="artwork-img" src={artwork.images.web.url} alt="artwork" />
           <div className="img-info">
-            <p>{artwork[0].title}</p>
+            <p>{artwork.title}</p>
             <p>{description}</p>
           </div>
         </div>
         <div className="artwork-description col-xl-7 col-12 d-flex justify-content-center">
           <p className="main-details">
             <span>Measurements: </span>
-            {artwork[0].measurements}
+            {artwork.measurements}
           </p>
           <p className="main-details">
             <span>Technique: </span>
-            {artwork[0].technique}
+            {artwork.technique}
           </p>
           <p className="main-details">
             <span>Type:  </span>
-            {artwork[0].type}
+            {artwork.type}
           </p>
-          <p>{artwork[0].wall_description}</p>
+          <p>{artwork.wall_description}</p>
           <button
             type="button"
             onClick={() => history.goBack()}
