@@ -124,9 +124,18 @@ main {
 
 header {
   height: 6rem;
-  background-color: #b78a21;
+  background-color: #733F35;
   width: 100%;
   margin-bottom: 2rem;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    font-size: 2.5rem;
+    font-family: $caveat-font;
+    font-weight: 700;
+    color: white;
+  }
 }
 
 @media screen and (min-width: 768px) {

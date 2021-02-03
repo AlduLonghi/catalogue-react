@@ -1,6 +1,9 @@
+import SelectFilter from '../components/SelectFilter';
+
 const Header = () => (
-  <header>
-    hello Im a header
+  <header className="d-flex">
+    <p>Artworks Catalogue</p>
+    <SelectFilter />
   </header>
 );
 

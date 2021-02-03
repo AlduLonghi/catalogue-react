@@ -26,8 +26,8 @@ const ArtworkDetails = ({ artworks }) => {
             {artwork[0].technique}
           </p>
           <p>
-            <span>Current location:  </span>
-            {artwork[0].current_location}
+            <span>Type:  </span>
+            {artwork[0].type}
           </p>
           <p>{artwork[0].wall_description}</p>
         </div>
