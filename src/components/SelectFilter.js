@@ -6,6 +6,7 @@ const SelectFilter = () => (
     <option value="Sculpture">Sculpture</option>
     <option value="Ceramic">Ceramic</option>
     <option value="Bound volume">Bound volume</option>
+    <option value="Miscellaneous">Miscellaneous</option>
   </select>
 );
 

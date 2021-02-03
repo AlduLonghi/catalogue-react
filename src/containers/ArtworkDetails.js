@@ -6,6 +6,7 @@ const ArtworkDetails = ({ artworks }) => {
   const { id } = useParams();
   const artwork = artworks.filter(artw => artw.id === id * 1);
   const description = artwork[0].creators.length ? artwork[0].creators[0].description : 'Unknown';
+
   return (
     <main className="d-flex justify-content-center main-height">
       <div className="artwork-details row mx-auto">
