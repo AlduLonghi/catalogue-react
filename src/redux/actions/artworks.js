@@ -14,7 +14,7 @@ const fetchArtworks = offset => dispatch => {
         type: FETCH_ARTWORKS,
         artworks: res.data.data,
       });
-    }).catch(error => console.log(error));
+    }).catch(error => error);
 };
 
 export default fetchArtworks;

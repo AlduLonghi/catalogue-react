@@ -4,7 +4,7 @@
 
 > This project consists on building a catalogue website using React JavaScript library.
 
-<img src="./src/assets/screenshot.png" width="600" height="500">
+<img src="./src/assets/screenshot.png" width="650" height="500">
 
 ## Built With
 
@@ -14,16 +14,16 @@
 
 ## Live Demo
 
-[Live Demo Link](https://my-amazing-bookstore.herokuapp.com/)
+[Live Demo Link](https://awsome-online-museum.herokuapp.com/)
 
 
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
-- Clone this repo by typing this in your terminal: `git clone https://github.com/AlduLonghi/bookstore-react.git`
+- Clone this repo by typing this in your terminal: `git clone https://github.com/AlduLonghi/catalogue-react.git`
 
-- Cd the cloned repo by running `cd bookstore-react`
+- Cd the cloned repo by running `cd catalogue-react`
 
 - Run `npm i` to install necessary dependencies and packages.
 
@@ -34,8 +34,6 @@ To get a local copy up and running follow these simple example steps.
 👤 **Author1**
 
 - Github: [@AlduLonghi](https://github.com/AlduLonghi)
-
-- Twitter: [@AbrilLonghi](https://twitter.com/AbrilLonghi)
 
 - Linkedin: [Aldana Abril Longhi](www.linkedin.com/in/aldanalonghi)
 

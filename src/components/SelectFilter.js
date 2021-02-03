@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import changeFilter from '../redux/actions/selectFilter';
 
 const SelectFilter = ({ changeFilter }) => {
-  const values = ['All', 'Painting', 'Metalwork', 'Sculpture', 'Ceramic', 'Bound volume', 'Miscellaneous'];
+  const values = ['All', 'Painting', 'Metalwork', 'Sculpture', 'Ceramic', 'Textile', 'Miscellaneous'];
 
   const handleChange = e => {
     changeFilter(e.target.value);
