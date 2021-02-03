@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
 
 $domine-font: 'Domine', serif;
 $playfair-font: 'Playfair Display', serif;
+$caveat-font: 'Caveat', cursive;
 
 * {
   margin: 0;
@@ -30,15 +32,15 @@ img {
 #root {
   margin: auto;
   background-color: black;
-  padding: 1rem;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 main {
-  height: 100%;
+  flex-direction: column;
+}
+
+.main-height {
+  height: 100vh;
 }
 
 .img-banner-cont {
@@ -120,6 +122,13 @@ main {
   font-style: normal;
 }
 
+header {
+  height: 6rem;
+  background-color: #b78a21;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
 @media screen and (min-width: 768px) {
   .artwork-details {
     width: 75%;
@@ -134,7 +143,7 @@ main {
 
 @media screen and (min-width: 1240px) {
   #root {
-    width: 85%;
+    width: 75%;
   }
 
   .artwork-details {
