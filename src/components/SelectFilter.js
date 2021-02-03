@@ -1,6 +1,6 @@
 const SelectFilter = () => (
-  <select className="form-select" aria-label="Default select example">
-    <option selected>Open this select menu</option>
+  <select className="form-select">
+    <option value="All">All</option>
     <option value="Painting">Painting</option>
     <option value="Metalwork">Metalwork</option>
     <option value="Sculpture">Sculpture</option>

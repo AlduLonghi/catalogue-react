@@ -1,4 +1,4 @@
-import FETCH_ARTWORKS from '../actions/types';
+import { FETCH_ARTWORKS } from '../actions/types';
 
 const initialState = {
   artworks: [],

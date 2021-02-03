@@ -1,5 +1,5 @@
 import axios from 'axios';
-import FETCH_ARTWORKS from './types';
+import { FETCH_ARTWORKS } from './types';
 
 const fetchArtworks = () => dispatch => {
   axios.get('https://openaccess-api.clevelandart.org/api/artworks/?skip=100&limit=300&has_image=1')
