@@ -130,7 +130,7 @@ main {
   color: white;
   font-size: 1.2rem;
 
-  p:not(:last-child) {
+  .main-details {
     font-family: $playfair-font;
     font-style: italic;
   }
@@ -163,6 +163,16 @@ main {
 
 .artwork-description-txt {
   font-style: normal;
+}
+
+.back-to-link {
+  text-decoration: underline;
+  font-size: 1.05rem;
+  text-align: center;
+
+  a {
+    color: #d37245;
+  }
 }
 
 @media screen and (min-width: 480px) {

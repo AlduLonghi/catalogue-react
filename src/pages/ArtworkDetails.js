@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const ArtworkDetails = ({ artworks }) => {
@@ -18,19 +18,20 @@ const ArtworkDetails = ({ artworks }) => {
           </div>
         </div>
         <div className="artwork-description col-xl-7 col-12 d-flex justify-content-center">
-          <p>
+          <p className="main-details">
             <span>Measurements: </span>
             {artwork[0].measurements}
           </p>
-          <p>
+          <p className="main-details">
             <span>Technique: </span>
             {artwork[0].technique}
           </p>
-          <p>
+          <p className="main-details">
             <span>Type:  </span>
             {artwork[0].type}
           </p>
           <p>{artwork[0].wall_description}</p>
+          <p className="back-to-link pt-2"><Link to="/">Back to homepage</Link></p>
         </div>
       </div>
     </main>
