@@ -9,16 +9,17 @@ const ArtworksContainer = ({ fetchArtworks, artworks }) => {
     fetchArtworks();
   }, []);
 
+  console.log(artworks[40]);
   return artworks.length ? (
     <div className="row artworks-col-cont">
       <div className="col-md-4 col-12">
-        {[...artworks].splice(0, 4).map(artw => <Artwork key={artw.id} artwork={artw} />)}
+        {[...artworks].splice(0, 100).map(artw => <Artwork key={artw.id} artwork={artw} />)}
       </div>
       <div className="col-md-4 col-12">
-        {[...artworks].splice(4, 4).map(artw => <Artwork key={artw.id} artwork={artw} />)}
+        {[...artworks].splice(100, 100).map(artw => <Artwork key={artw.id} artwork={artw} />)}
       </div>
       <div className="col-md-4 col-12">
-        {[...artworks].splice(7, 4).map(artw => <Artwork key={artw.id} artwork={artw} />)}
+        {[...artworks].splice(200, 99).map(artw => <Artwork key={artw.id} artwork={artw} />)}
       </div>
     </div>
   ) : (

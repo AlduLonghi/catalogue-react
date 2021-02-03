@@ -4,7 +4,7 @@ import Routes from './Routes';
 function App() {
   return (
     <BrowserRouter>
-      <main>
+      <main className="container-fluid">
         <Routes />
       </main>
     </BrowserRouter>

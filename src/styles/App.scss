@@ -1,6 +1,8 @@
-@import 'https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 
 $domine-font: 'Domine', serif;
+$playfair-font: 'Playfair Display', serif;
 
 * {
   margin: 0;
@@ -13,7 +15,7 @@ a {
 }
 
 body {
-  background-color: #81592b;
+  background-color: black;
 }
 
 .App {
@@ -28,7 +30,15 @@ img {
 #root {
   margin: auto;
   background-color: black;
-  padding: 0 2rem;
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main {
+  height: 100%;
 }
 
 .img-banner-cont {
@@ -36,7 +46,7 @@ img {
 }
 
 .img-banner {
-  width: 83%;
+  width: 87%;
   padding: 0.7rem 0.4rem;
   margin: auto;
   margin-top: -2rem;
@@ -46,7 +56,7 @@ img {
   font-family: $domine-font;
 
   p {
-    line-height: 1.2rem;
+    line-height: 1.3rem;
   }
 
   p:first-child {
@@ -61,13 +71,74 @@ img {
   }
 }
 
-.artwork-details {
-  height: 100vh;
+.artwork-description {
+  flex-direction: column;
   color: white;
+  font-size: 1.2rem;
+
+  p:not(:last-child) {
+    font-family: $playfair-font;
+    font-style: italic;
+  }
+
+  p:first-child {
+    margin-top: 1rem;
+  }
+
+  span {
+    color: #d37245;
+  }
+}
+
+.artwork-details {
+  padding: 1rem;
+  background-color: #393012;
+}
+
+.artwork-det-img {
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    border: 5px solid white;
+  }
+}
+
+.img-info {
+  width: 100%;
+  background-color: white;
+  font-family: $domine-font;
+  text-align: center;
+
+  p:first-child {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}
+
+.artwork-description-txt {
+  font-style: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .artwork-details {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .artwork-details {
+    width: 70%;
+  }
 }
 
 @media screen and (min-width: 1240px) {
   #root {
-    width: 75%;
+    width: 85%;
+  }
+
+  .artwork-details {
+    padding: 2rem;
+    width: 100%;
   }
 }
