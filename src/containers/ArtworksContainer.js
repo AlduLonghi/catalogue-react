@@ -5,7 +5,9 @@ import fetchArtworks from '../redux/actions/artworks';
 import Artwork from '../components/Artwork';
 import LoadingWheel from '../components/LoadingWheel';
 
-const ArtworksContainer = ({ artworks, filter, fetchArtworks }) => {
+const ArtworksContainer = ({
+  artworks, filter, fetchArtworks, isLoading,
+}) => {
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
@@ -13,7 +15,7 @@ const ArtworksContainer = ({ artworks, filter, fetchArtworks }) => {
   }, [offset]);
 
   let toRenderComponent;
-  if (artworks.length) {
+  if (!isLoading) {
     const displayedArtworks = filter === 'All'
       ? [...artworks]
       : [...artworks].filter(artw => artw.type === filter);
@@ -34,9 +36,9 @@ const ArtworksContainer = ({ artworks, filter, fetchArtworks }) => {
         <button
           type="button"
           onClick={() => setOffset(prev => prev + 120)}
-          className="btn btn-warning btn-lg py-4 mx-auto"
+          className="btn btn-warning btn-lg my-4 mx-auto"
         >
-          Large button
+          Load more
         </button>
       </div>
     );
@@ -59,11 +61,13 @@ ArtworksContainer.propTypes = {
   artworks: PropTypes.instanceOf(Array).isRequired,
   filter: PropTypes.string.isRequired,
   fetchArtworks: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = state => ({
   artworks: state.artworks.artworks,
   filter: state.filter,
+  isLoading: state.artworks.isLoading,
 });
 
 const mapDispatchToProps = {

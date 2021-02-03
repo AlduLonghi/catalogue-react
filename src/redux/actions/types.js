@@ -1,2 +1,3 @@
 export const FETCH_ARTWORKS = 'FETCH_ARTWORKS';
+export const IS_LOADING = 'IS_LOADING';
 export const CHANGE_FILTER = 'CHANGE_FILTER';
