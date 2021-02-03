@@ -8,9 +8,10 @@
 
 ## Built With
 
-- JavaScript
-- React
-- SaSS
+- [JavaScript](https://es.wikipedia.org/wiki/JavaScript)
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [Sass](https://sass-lang.com/)
 
 ## Live Demo
 
@@ -50,7 +51,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse curriculum
-- Zeplin
+- [Marc-Antoine Roy](https://www.behance.net/gallery/11351281/NomNom)
 
 ## 📝 License
 
