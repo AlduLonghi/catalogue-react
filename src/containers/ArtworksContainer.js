@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import fetchArtworks from '../redux/actions/artworks';
 import Artwork from '../components/Artwork';
 import LoadingWheel from '../components/LoadingWheel';
@@ -8,11 +8,12 @@ import LoadingWheel from '../components/LoadingWheel';
 const ArtworksContainer = ({
   artworks, filter, fetchArtworks, isLoading,
 }) => {
-  const [offset, setOffset] = useState(0);
+  const [offset, setOffset] = useState(120);
 
-  useEffect(() => {
+  const handleOnClick = () => {
+    setOffset(prev => prev + 121);
     fetchArtworks(offset);
-  }, [offset]);
+  };
 
   let toRenderComponent;
   if (!isLoading) {
@@ -35,14 +36,14 @@ const ArtworksContainer = ({
         </div>
         <button
           type="button"
-          onClick={() => setOffset(prev => prev + 120)}
+          onClick={handleOnClick}
           className="btn btn-warning btn-lg my-4 mx-auto"
         >
           Load more
         </button>
       </div>
     );
-  } else {
+  } else if (isLoading || artworks.length === 0) {
     toRenderComponent = (
       <div className="d-flex justify-content-center align-items-center load-wheel-cont">
         <LoadingWheel />
