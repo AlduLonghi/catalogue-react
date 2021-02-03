@@ -1,6 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
 import Home from '../pages/home';
-import ArtworkDetails from '../containers/ArtworkDetails';
+import ArtworkDetails from '../pages/ArtworkDetails';
 
 const Routes = () => (
   <Switch>

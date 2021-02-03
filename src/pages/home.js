@@ -4,7 +4,7 @@ import ArtworksContainer from '../containers/ArtworksContainer';
 const Home = () => (
   <>
     <Header />
-    <main className="container-fluid d-flex justify-content-center">
+    <main className="d-flex justify-content-center main-padding">
       <ArtworksContainer />
     </main>
   </>

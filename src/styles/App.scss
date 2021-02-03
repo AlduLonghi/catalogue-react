@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 $domine-font: 'Domine', serif;
 $playfair-font: 'Playfair Display', serif;
-$caveat-font: 'Caveat', cursive;
+$yusei-font: 'Yusei Magic', sans-serif;
 
 * {
   margin: 0;
@@ -18,7 +18,7 @@ a {
 
 a:hover {
   color: black;
-  outline: none;
+  text-decoration: none;
 }
 
 body {
@@ -29,39 +29,74 @@ body {
   text-align: center;
 }
 
-img {
+.artwork-img {
   width: 100%;
   height: auto;
 }
 
 #root {
   margin: auto;
-  background-color: black;
   min-height: 100vh;
 }
 
 header {
-  height: 6rem;
-  background-color: #733f35;
+  height: 5rem;
+  background-color: #52563b;
   width: 100%;
-  margin-bottom: 2rem;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
 
   p {
-    font-size: 2.5rem;
-    font-family: $caveat-font;
-    font-weight: 700;
-    color: white;
+    display: none;
   }
+
+  div {
+    height: 80%;
+    padding: 0 1rem;
+    background-color: #5c241e;
+  }
+}
+
+select {
+  width: 35%;
+  height: 1.9rem;
+  border-radius: 0.2rem;
+  border: none;
+  background-color: white;
+  color: #3b3c3d;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  outline: none;
+}
+
+.logo {
+  width: 3rem;
 }
 
 main {
   flex-direction: column;
 }
 
+.main-padding {
+  padding: 0 1rem;
+}
+
+.artwork-det-img {
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    border: 5px solid white;
+  }
+}
+
 .img-banner-cont {
   margin-bottom: 1.5rem;
+
+  img:hover {
+    transform: scale(1.05, 1.05);
+  }
 }
 
 .img-banner {
@@ -114,15 +149,6 @@ main {
   background-color: #393012;
 }
 
-.artwork-det-img {
-  flex-direction: column;
-
-  img {
-    width: 100%;
-    border: 5px solid white;
-  }
-}
-
 .img-info {
   width: 100%;
   background-color: white;
@@ -137,6 +163,20 @@ main {
 
 .artwork-description-txt {
   font-style: normal;
+}
+
+@media screen and (min-width: 480px) {
+  header {
+    p {
+      display: block;
+      font-size: 1.7rem;
+      font-family: $yusei-font;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0;
+      margin-left: 1rem;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -156,6 +196,10 @@ main {
   }
 
   .main-height {
-    height: 100vh;
+    min-height: 100vh;
+  }
+
+  .main-padding {
+    padding: 0;
   }
 }

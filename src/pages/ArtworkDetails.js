@@ -11,7 +11,7 @@ const ArtworkDetails = ({ artworks }) => {
     <main className="d-flex justify-content-center main-height">
       <div className="artwork-details row mx-auto">
         <div className="artwork-det-img d-flex justify-content-center col-xl-5 col-12 px-0">
-          <img src={artwork[0].images.web.url} alt="artwork" />
+          <img className="artwork-img" src={artwork[0].images.web.url} alt="artwork" />
           <div className="img-info">
             <p>{artwork[0].title}</p>
             <p>{description}</p>
