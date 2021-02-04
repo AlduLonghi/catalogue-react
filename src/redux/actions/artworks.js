@@ -7,7 +7,7 @@ const isLoading = () => ({
 
 const fetchArtworks = offset => dispatch => {
   dispatch(isLoading());
-  axios.get(`https://openaccess-api.clevelandart.org/api/artworks/?skip=${offset}&limit=300&has_image=1`)
+  axios.get(`https://openaccess-api.clevelandart.org/api/artworks/?skip=${offset}&limit=120&has_image=1`)
     .then(res => {
       dispatch(isLoading());
       dispatch({
