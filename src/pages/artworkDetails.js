@@ -1,15 +1,17 @@
 import { connect } from 'react-redux';
 import { useParams, useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import LoadingWheel from '../components/LoadingWheel';
 
-const ArtworkDetails = ({ artworks }) => {
+const ArtworkDetails = ({ artworks, isLoading }) => {
   const history = useHistory();
   const { id } = useParams();
-  const artwork = artworks.filter(artw => artw.id === id * 1)[0];
-  const description = artwork.creators.length ? artwork.creators[0].description : 'Unknown';
 
-  return (
-    <main className="d-flex justify-content-center main-height">
+  let toRenderComponent;
+  if (artworks.length && !isLoading) {
+    const artwork = artworks.filter(artw => artw.id === id * 1)[0];
+    const description = artwork.creators.length ? artwork.creators[0].description : 'Unknown';
+    toRenderComponent = (
       <div className="artwork-details row mx-auto">
         <div className="artwork-det-img d-flex justify-content-center col-xl-5 col-12 px-0">
           <img className="artwork-img" src={artwork.images.web.url} alt="artwork" />
@@ -41,16 +43,26 @@ const ArtworkDetails = ({ artworks }) => {
           </button>
         </div>
       </div>
+    );
+  } else {
+    toRenderComponent = (<LoadingWheel />);
+  }
+
+  return (
+    <main className="d-flex justify-content-center main-height align-items-center">
+      {toRenderComponent}
     </main>
   );
 };
 
 ArtworkDetails.propTypes = {
   artworks: PropTypes.instanceOf(Array).isRequired,
+  isLoading: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = state => ({
   artworks: state.artworks.artworks,
+  isLoading: state.artworks.isLoading,
 });
 
 export default connect(mapStateToProps, null)(ArtworkDetails);
