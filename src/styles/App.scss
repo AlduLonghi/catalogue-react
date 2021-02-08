@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+$domine-font: 'Domine', serif;
+$playfair-font: 'Playfair Display', serif;
+$yusei-font: 'Yusei Magic', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+}
+
+.App {
+  text-align: center;
+}
+
+.artwork-img {
+  width: 100%;
+  height: auto;
+}
+
+#root {
+  margin: auto;
+  min-height: 100vh;
+}
+
+header {
+  height: 5rem;
+  background-color: #52563b;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+
+  p {
+    display: none;
+  }
+
+  div {
+    height: 80%;
+    padding: 0 1rem;
+    background-color: #5c241e;
+  }
+}
+
+select {
+  width: 35%;
+  height: 1.9rem;
+  border-radius: 0.2rem;
+  border: none;
+  background-color: white;
+  color: #3b3c3d;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  outline: none;
+}
+
+.logo {
+  width: 3rem;
+}
+
+main {
+  flex-direction: column;
+}
+
+.main-padding {
+  padding: 0 1rem;
+}
+
+.artwork-det-img {
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    border: 5px solid white;
+  }
+}
+
+.img-banner-cont {
+  margin-bottom: 1.5rem;
+
+  img:hover {
+    transform: scale(1.05, 1.05);
+  }
+}
+
+.img-banner {
+  width: 87%;
+  padding: 0.7rem 0.4rem;
+  margin: auto;
+  margin-top: -2rem;
+  background-color: white;
+  opacity: 0.85;
+  text-align: center;
+  font-family: $domine-font;
+
+  p {
+    line-height: 1.3rem;
+  }
+
+  p:first-child {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  p:nth-child(2) {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+}
+
+.artwork-description {
+  flex-direction: column;
+  color: white;
+  font-size: 1.2rem;
+
+  .main-details {
+    font-family: $playfair-font;
+    font-style: italic;
+  }
+
+  p:first-child {
+    margin-top: 1rem;
+  }
+
+  span {
+    color: #d37245;
+  }
+}
+
+.artwork-details {
+  padding: 1rem;
+  background-color: #393012;
+}
+
+.img-info {
+  width: 100%;
+  background-color: white;
+  font-family: $domine-font;
+  text-align: center;
+
+  p:first-child {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}
+
+.artwork-description-txt {
+  font-style: normal;
+}
+
+.back-to-btn {
+  text-decoration: underline;
+  font-size: 1.05rem;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  color: #d37245;
+}
+
+@media screen and (min-width: 480px) {
+  header {
+    p {
+      display: block;
+      font-size: 1.7rem;
+      font-family: $yusei-font;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0;
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .artwork-details {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  #root {
+    width: 75%;
+  }
+
+  .artwork-details {
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .main-height {
+    min-height: 100vh;
+  }
+
+  .main-padding {
+    padding: 0;
+  }
+}

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders SelectFilter Component 1`] = `
+<select
+  className="form-select"
+  data-testid="select"
+  onChange={[Function]}
+>
+  <option
+    value="All"
+  >
+    All
+  </option>
+  <option
+    value="Painting"
+  >
+    Painting
+  </option>
+  <option
+    value="Metalwork"
+  >
+    Metalwork
+  </option>
+  <option
+    value="Sculpture"
+  >
+    Sculpture
+  </option>
+  <option
+    value="Ceramic"
+  >
+    Ceramic
+  </option>
+  <option
+    value="Textile"
+  >
+    Textile
+  </option>
+  <option
+    value="Miscellaneous"
+  >
+    Miscellaneous
+  </option>
+</select>
+`;
