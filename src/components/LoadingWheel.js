@@ -1,7 +1,7 @@
 import '../styles/LoadingWheel.scss';
 
 const LoadingWheel = () => (
-  <div className="lds-roller">
+  <div data-testid="loading-element" className="lds-roller">
     <div />
     <div />
     <div />

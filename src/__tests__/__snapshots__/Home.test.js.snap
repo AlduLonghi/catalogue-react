@@ -21,6 +21,7 @@ Array [
     </div>
     <select
       className="form-select"
+      data-testid="select"
       onChange={[Function]}
     >
       <option

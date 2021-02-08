@@ -10,7 +10,7 @@ const SelectFilter = ({ changeFilter }) => {
   };
 
   return (
-    <select className="form-select" onChange={handleChange}>
+    <select data-testid="select" className="form-select" onChange={handleChange}>
       {values.map(val => <option key={val} value={val}>{val}</option>)}
     </select>
   );
